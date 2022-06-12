@@ -1,0 +1,25 @@
+<section *ngFor="let obj of content" class="lifecycle-hooks-subsection subsection">
+    <h3 class="lifecycle-hooks-title">
+        {{obj.title}}
+    </h3>
+    <h5 class="lifecycle-hooks-small-title">
+        {{obj.sub_title_first}}
+    </h5>
+    <p class="lifecycle-hooks-text">
+        {{obj.text_first}}
+    </p>
+    <h5 class="lifecycle-hooks-small-title">
+        {{obj.sub_title_second}}
+    </h5>
+    <p class="lifecycle-hooks-text">
+        {{obj.text_second}}
+    </p>
+    <h5 class="lifecycle-hooks-small-title">
+        {{obj.sub_title_third}}
+    </h5>
+    <p class="lifecycle-hooks-text">
+        {{obj.text_third}}
+    </p>
+    <div *ngIf="obj.title==='ngOnChanges()'"><input *ngIf="loggedIn" placeholder="ngOnChanges()"></div>
+    <div *ngIf="obj.title==='ngOnInit()'">ON INIT EXAMPLE</div>
+</section>

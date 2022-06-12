@@ -1,0 +1,80 @@
+<main class="page-main-container">
+    <article class="main-title">
+        <header class="page-title">
+            <h1 class="main-title">
+                COMPONENTS
+            </h1>
+        </header>
+    </article>
+
+    <article class="calling-components main-article">
+        <section class="calling-components-top-section top-section">
+            <h2 class="calling-components-title">
+                RENDERING
+            </h2>
+            <p class="calling-components-text">
+                There are three ways to call component inside another component:
+            </p>
+            <ul class="calling-components-list">
+                <li class="calling-components-list-item">selector as HTML tag</li>
+                <li class="calling-components-list-item">selector as Class</li>
+                <li class="calling-components-list-item">selector as Attribute</li>
+            </ul>
+        </section>
+        <section class="calling-components-subsection">
+            <h3 class="calling-components-subsection-title">
+                Selector as HTML tag
+            </h3>
+            <p class="calling-components-subsection-paragraph">
+                First, to show html as string we create variable htmlString inside this component (component.components.ts) and called it here.<br /> 
+                This is output and this is what call of selector as HTML implementation look like: {{htmlString}}<br />
+                Below we rendered example component with default content 'example-works!'.<br />
+                Declaration for rendering some component we can see at ts (typescript) file of component we want to render and there inside @Selector object by key 'selector'.
+            </p>
+            <p class="calling-components-subsection-example">
+                <app-example></app-example>
+            </p>
+        </section>
+        <section class="calling-components-subsection">
+            <h3 class="calling-components-subsection-title">Selector as Class</h3>
+            <p class="calling-components-subsection-paragraph">
+                When we want to call some components as class name like this: {{classTemplate}}, all we need to do is to change value of selector by adding dot as prefix: ".app-example-class"<br />
+                And set class name as selector value, in this case: app-example-class.
+            </p>
+            <div class="app-example-class calling-components-subsection-example"></div>
+        </section>
+        <section class="calling-components-subsection">
+            <h3 class="calling-components-subsection-title">Selector as Attribute</h3>
+            <p class="calling-components-subsection-paragraph">
+                Procedure is the same as selector as class but instead of a dot as a prefix we put parentheses ([]) inside @Component selector key in ts file of the folder: {{attributeTemplate}}<br />
+                Also, unlikely selector as class, when we use method selector as attribute, we put selector value like attribute in the element, this is what look like component below that render text 'example-atribute works!': {{htmlAttribute}}</p>
+            <p class="calling-components-subsection-example" app-example-attribute></p>
+        </section>
+    </article>
+
+    <article class="lifecycle-hooks main-article">
+        <section class="lifecycle-hooks-top-section top-section">
+            <h2 class="calling-components-title">
+                LIFECYCLE METHODS
+            </h2>
+            <p class="lifecycle-hooks-text">
+                There is following lifecycle-hooks:
+            </p>
+            <ul class="lifecycle-hooks-list">
+                <li class="lifecycle-hooks-item">ngOnChanges()</li>
+                <li class="lifecycle-hooks-item">ngOnInit()</li>
+                <li class="lifecycle-hooks-item">ngDoCheck()</li>
+                <li class="lifecycle-hooks-item">ngAfterContentInit()</li>
+                <li class="lifecycle-hooks-item">ngAfterContentChecked()</li>
+                <li class="lifecycle-hooks-item">ngAfterViewInit()</li>
+                <li class="lifecycle-hooks-item">ngAfterViewChecked()</li>
+                <li class="lifecycle-hooks-item">ngOnDestroy()</li>
+            </ul>
+        </section>
+
+    </article>
+
+    <app-rendering-subsection [loggedIn]="userLoggedIn"></app-rendering-subsection>
+
+
+</main>

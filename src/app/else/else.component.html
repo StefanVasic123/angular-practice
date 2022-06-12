@@ -1,0 +1,107 @@
+<div class="component-main-container">
+    <h1 class="main-title">
+        Main Title: {{ title }}
+      </h1>
+      <p class="main-text">
+        Always is better to learn with your own creation. That way you have one addition learning resource: ambition. <br />
+        app.component.html is layout <br />
+        app.component.ts is functionalities that we can access without import and with parentesiess <br />
+        question? how we connect html and ts file? <br />
+        answer: inside app.components.ts we have some following object with properties: <br />
+        @Component is decoration function that specifies Angular metadata for that component <br /> 
+        <i>metadata properties: </i><br />
+        selector: 'app-root', => selector is used for targeting that element
+        templateUrl: './app.component.html', => targeted html element from targeted folder
+        styleUrls: ['./app.component.css'] => styles
+        <i>hooks:</i><br />
+        The ngOnInit() is a lifecycle hook. Good place to set logic because it's rendered shortly after component is rendered.
+      </p>
+    
+      <p class="sub-text">
+        create new folder with all components and logic:  ng g c 'name of the folder'
+      </p>
+      <h3>THIS IS react-outlet</h3>
+    
+      <section class="section-desc">
+        <div class="section-title">
+          <h2 class="sub-title">PASSING COMPONENTS</h2>
+        </div>
+        <article class="article-component">
+          styled text about passing components, with some functionalities
+        </article>
+        <div class="passed-task">
+          <h3 class="passed-task-title">
+            passed task title (title from app-task)
+          </h3>
+          <app-task></app-task>
+        </div>
+        <div class="passed-task">
+          <h3 class="passed-task-title">
+            passed task title (title from app-list)
+          </h3>
+          <app-list></app-list>
+        </div>
+    </section>
+    
+    <section class="section-desc">
+      <div class="section-title">
+        <h2 class="sub-title">PASSING PROPS</h2>
+      </div>
+      <article class="article-component">
+        styled text about passing properties flow, with some functionalities
+      </article>
+    </section>
+    
+    <section class="section-desc">
+      <div class="section-title">
+        <h2 class="sub-title">angular built in methods (PIPES)</h2>
+      </div>
+      <article class="article-component">
+        styled text about pipes, with some examples and lession how to create custom pipes
+      </article>
+    </section>
+    
+    <section class="section-desc">
+      <div class="section-title">
+        <h2 class="sub-title">ROUTING</h2>
+      </div>
+      <article class="article-component">
+        some links, back and fourth, with flow explanation <br />
+        <b>set links in nav</b>
+        <ul class="li">define routes in app-routing.module.ts (Routes => obj: path, component)</ul>
+        <ul class="li">implement links for redirection as routerLink="/example"</ul>
+        <ul class="li">react-outlet => updating template dinamically based on url <br />
+        it render content that is on choosen route: url: tasks render task.component.html in place where is react-outlet putted
+        </ul>
+        <ul class="li"></ul>
+        <ul class="li"></ul>
+        <ul class="li"></ul>
+        <ul class="li"></ul>
+        <ul class="li"></ul>
+        <ul>
+          <li><a routerLink="/tasks" routerLinkActive="active">tasks link</a></li>
+          <li><a routerLink="/list">list link</a></li>
+        </ul>
+        <p>next => send props through route with ActivatedRoute and ParamMap</p>
+      </article>
+    </section>
+    
+    <section class="additional-descriptions">
+      <p>set section-desc into separate folders and render-it here as list with different props</p><br />
+    </section>
+
+    <h1>ADDITTIONAL</h1>
+    <ul>
+      <li>Lifecicle of components</li>
+      <li>redux/global state</li>
+      <li>css/styles</li>
+      <li>http</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</div>
+

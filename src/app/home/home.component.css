@@ -1,0 +1,11 @@
+.home-hero {
+    height: 90vh;
+    width: 100%;
+    background-color: yellowgreen;
+    display: grid;
+}
+.puzzle-1 {
+    width: 100px;
+    height: 100px; 
+    background-color: red;
+}
