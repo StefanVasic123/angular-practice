@@ -6,11 +6,13 @@ export const CONTENT = [
         sub_title_second: 'timing', 
         text_second: 'Called before ngOnInit(). And one or more data-bound input properties is changeed.',
         sub_title_third: 'how it works',
-        text_third: `
-        prvo definisemo varijablu u parent ts file-u: userLoggedIn: boolean = false; 
+        text_third: 
+        `
+        prvo definisemo varijablu u parent ts file-u: clickMe: string = 'click'; 
         onda u parent template-u (html) nadjemo gde se renderuje children 
-        ubacujemo vrednost definisane varijable u argumentu koji cemo koristiti u metodama u child-u (ngOnChange, onOnInit itd) <app-rendering-child [loggedIn]="userLoggedIn"></app-rendering-child>. 
-        U children komponenti prvo u construct-oru definisemo predefinisan argument kojim se vezujemo sa parent uslovom this.loggedIn = false i bind-ujemo ga za Input pomocu @Input build-in metoda: @Input() loggedIn: boolean; 
+        ubacujemo vrednost definisane varijable u argumentu, kao svojevrsni props, koji cemo koristiti u metodama u child-u (ngOnChange, onOnInit itd) <app-rendering-child [text]="clickMe"></app-rendering-child>. 
+        [text] cemo koristiti u children ts file-u, tako sto cemo ga uvesti pomocu @Input() metoda.
+        U children komponenti prvo u construct-oru definisemo predefinisan argument kojim se vezujemo sa parent uslovom this.text = '' i, kao sto smo vec rekli, bind-ujemo ga za Input pomocu @Input build-in metoda: @Input() text: string; 
         Ispod construct-ora, na mestu gde definisemo lifecycle metode definisemo ngOnChanges metod sa argumentom (changes: SimpleChanges) (SimpleChanges je build-in metoda). 
         Changes je objekat koji sadrzi sledece parametre: 
         {
@@ -18,6 +20,8 @@ export const CONTENT = [
             "firstChange": true,
             "previousValue": undefined
         }
+        Every time ngOnChanges() is called, the SimpleChanges instance captures the parentData's
+        ! only changes from parent component will trigger this function
         `
     },
     { 

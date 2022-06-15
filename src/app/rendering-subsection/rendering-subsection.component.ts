@@ -7,17 +7,26 @@ import { CONTENT } from './data';
   styleUrls: ['./rendering-subsection.component.css']
 })
 export class RenderingSubsectionComponent implements OnInit { 
-  @Input() loggedIn: boolean; 
+  @Input() text: string; 
   content = CONTENT;
-  constructor() { 
-    this.loggedIn = true;
-  }
 
-  ngOnInit(): void {
+  constructor() { 
+    this.text = '';
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes)
+    console.log(changes);
+  }
+  
+  ngOnInit(): void {
+  }
+
+  inputOnChange(e: any) {
+    console.log(e.target.value)
+  }
+
+  onClick(obj: object) {
+    console.log('clicked: ', obj)
   }
 
 }

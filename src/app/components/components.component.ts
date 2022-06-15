@@ -12,13 +12,11 @@ export class ComponentsComponent implements OnInit {
   classTemplate ='<div class=".app-example-class"></div>'
   attributeTemplate = '[app-example-attribute]'
   htmlAttribute = '<p class="about-subsection-example" app-example-attribute></p>'
-
-  userLoggedIn: boolean = false;
   
+  clickMe: string = 'click'; 
   constructor() {
-   }
+  }
 
   ngOnInit(): void {
   }
-
 }

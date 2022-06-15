@@ -20,6 +20,6 @@
     <p class="lifecycle-hooks-text">
         {{obj.text_third}}
     </p>
-    <div *ngIf="obj.title==='ngOnChanges()'"><input *ngIf="loggedIn" placeholder="ngOnChanges()"></div>
+    <div *ngIf="obj.title==='ngOnChanges()'"><input (change)="inputOnChange($event)" placeholder="ngOnChanges()"><button (click)="onClick(obj)">{{ text }}</button></div>
     <div *ngIf="obj.title==='ngOnInit()'">ON INIT EXAMPLE</div>
 </section>
